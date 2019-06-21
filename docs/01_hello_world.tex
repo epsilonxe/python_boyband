@@ -1,0 +1,134 @@
+\documentclass{beamer}
+
+\input{cmd}
+
+\begin{document}
+
+%------------------- FRAME ---------------
+\coverframe{01}{hello world}
+%------------------- FRAME ---------------
+\hbg
+\begin{frame}
+\ftitle{Installations}
+\tcbset{colback=white,width=(\linewidth-9pt)/3,
+equal height group=AT,before=,after=\hfill,fonttitle=\bfseries}
+\begin{tcolorbox}[title={Windows}, colframe=blue!60]
+\centering
+\qrcode{https://www.python.org}
+\vspace{2mm}\\
+\url{https://python.org/downloads}
+\end{tcolorbox}
+\begin{tcolorbox}[title={macOS}, colframe=gray]
+\centering
+\qrcode{https://github.com/epsilonxe/macpython}
+\vspace{2mm}\\
+{\url{https://github.com/epsilonxe/macpython}}
+\end{tcolorbox}
+\begin{tcolorbox}[title={Linux}, colframe=onion]
+\centering
+\qrcode{https://github.com/pyenv/pyenv}
+\vspace{2mm}\\
+\url{https://github.com/pyenv/pyenv}
+\end{tcolorbox}
+\end{frame}
+%------------------- FRAME ---------------
+\vbg
+\begin{frame}[fragile]
+\ftitle{Shell\\Console}
+\begin{terminal}
+\shi{python -V}
+\begin{sho}
+Python 3.7.2 
+\end{sho}
+\shi{python}
+\begin{sho}
+Python 3.7.2 (default, Mar 21 2019, 17:53:25)
+[Clang 10.0.0 (clang-1000.10.44.4)] on darwin
+Type "help", "copyright", "credits" or "license"
+for more information. 
+\end{sho}
+\pyi{}   
+\end{terminal}
+\end{frame}
+%------------------- FRAME ---------------
+\vbg
+\begin{frame}[fragile]
+\ftitle{Python\\Console}
+\begin{terminal}
+\pyi{print("Hello World")}
+\begin{sho}
+Hello World    
+\end{sho}
+\pyi{exit()}\\
+\shi{}
+\end{terminal}
+\end{frame}
+
+%------------------- FRAME ---------------
+\vbg
+\begin{frame}[fragile]
+\ftitle{Coding\\}
+
+\begin{pycode}{helloworld.py}
+print("Hello World!")
+print("I'm Python.")
+print('Designed by "G.R. Rossum".')
+\end{pycode}
+
+\end{frame}
+
+%------------------- FRAME ---------------
+\vbg
+\begin{frame}[fragile]
+\ftitle{Coding\\}
+\begin{pycode}{helloworld.py}
+print("Hello World!")
+print("I'm Python.")
+print('Designed by "G.R. Rossum".')
+\end{pycode}
+
+\tikz[remember picture, overlay]{\node at (7,2.8) {% 
+\begin{terminal}
+\shi{python helloworld.py}
+\begin{sho}
+Hello World!
+I'm Python.
+Designed by "G.R. Rossum".  
+\end{sho}
+\shi{} 
+\end{terminal}
+};}
+\end{frame}
+
+%------------------- FRAME ---------------
+\episodeisdone
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

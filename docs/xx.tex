@@ -1,0 +1,265 @@
+\documentclass{beamer}
+
+\input{cmd}
+
+\begin{document}
+
+%------------------- FRAME ---------------
+\coverframe{02}{data types}
+%------------------- FRAME ---------------
+\vbg
+\begin{frame}[fragile]
+\ftitle{Numbers\\} 
+\begin{terminal}
+\pyio{2 + 2}{4}
+\pyio{50 - 5*6}{20}    
+\pyio{(50 - 5*6) / 4}{5.0}
+\pyio{8 / 5  \# division always returns a floating point}{1.6}
+\pyi{}
+\end{terminal}
+\end{frame}
+
+%------------------- FRAME ---------------
+\vbg
+\begin{frame}[fragile]
+\ftitle{Numbers\\} 
+\begin{terminal}
+\pyio{17 / 3  \# classic division returns a float}{5.666666666666667}
+\pyio{17 // 3  \# floor division discards the fractional part}{5}
+\pyio{17 \% 3  \# the \% operator returns the remainder of the division}{2}
+\pyio{5 * 3 + 2  \# result * divisor + remainder}{17}
+\pyi{}
+\end{terminal}
+\end{frame}
+
+%------------------- FRAME ---------------
+\vbg
+\begin{frame}[fragile]
+\ftitle{Numbers\\} 
+\begin{terminal}
+\pyio{5 ** 2  \# 5 squared}{25}
+\pyio{2 ** 7  \# 2 to the power of 7}{128}
+\pyi{}
+\end{terminal}
+\end{frame}
+
+%------------------- FRAME ---------------
+\vbg
+\begin{frame}[fragile]
+\ftitle{Numbers\\} 
+\begin{terminal}
+\pyi{width = 20}\\
+\pyi{height = 5 * 9}\\
+\pyio{width * height}{900}
+\pyi{n}
+\begin{sho}
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'n' is not defined    
+\end{sho}
+\pyio{4 * 3.75 - 1}{14.0}
+\pyi{}
+\end{terminal}
+\end{frame}
+
+%------------------- FRAME ---------------
+\vbg
+\begin{frame}[fragile]
+\ftitle{Numbers\\} 
+\begin{terminal}
+\pyi{tax = 12.5 / 100}\\
+\pyi{price = 100.50}\\
+\pyio{price * tax}{12.5625}
+\pyio{price + {\huge\textunderscore}}{113.0625}
+\pyio{round({\huge\textunderscore}, 2)}{113.06}
+\pyi{}
+\end{terminal}
+\end{frame}
+
+%------------------- FRAME ---------------
+\vbg
+\begin{frame}[fragile]
+\ftitle{Strings\\} 
+\begin{terminal}
+\pyio{'spam eggs'}{'spam eggs'}
+\pyio{'doesn\textbackslash't'}{"doesn't"}
+\pyio{"doesn't"}{"doesn't"}
+\pyio{'"Yes," they said.'}{'"Yes," they said.'}
+\pyio{"\textbackslash"Yes,\textbackslash" they said."}{'"Yes," they said.'}
+\pyi{}
+\end{terminal}
+\end{frame}
+
+%------------------- FRAME ---------------
+\vbg
+\begin{frame}[fragile]
+\ftitle{Strings\\} 
+\begin{terminal}
+\pyi{s = 'First line.{\textbackslash}nSecond line.'}\\
+\pyio{s}{'First line.{\textbackslash}nSecond line.'}
+\pyi{print(s)}
+\begin{sho}
+First line.
+Second line.    
+\end{sho}
+\pyi{}
+\end{terminal}
+\end{frame}
+
+%------------------- FRAME ---------------
+\vbg
+\begin{frame}[fragile]
+\ftitle{Strings\\} 
+\begin{terminal}
+\pyi{print("C:{\textbackslash}some{\textbackslash}name")}
+\begin{sho}
+C:\some
+ame    
+\end{sho}
+\pyi{print(r"C:{\textbackslash}some{\textbackslash}name")}
+\begin{sho}
+C:\someame    
+\end{sho}
+\pyi{}
+\end{terminal}
+\end{frame}
+
+%------------------- FRAME ---------------
+\vbg
+\begin{frame}[fragile]
+\ftitle{Strings\\} 
+\begin{terminal}
+\pyi{print("""{\textbackslash}\\
+{...\quad}Usage:\,\,thingy [OPTIONS]\\
+{...\quad}{\qquad}-h\qquad\qquad\quad Display this usage message\\
+{...\quad}{\qquad}-H hostname               Hostname to connect to\\
+""")}
+\begin{sho}
+Usage: thingy [OPTIONS]
+     -h          Display this usage message
+     -H hostname Hostname to connect to   
+\end{sho}
+\pyi{}
+\end{terminal}
+\end{frame}
+
+%------------------- FRAME ---------------
+\vbg
+\begin{frame}[fragile]
+\ftitle{Strings\\} 
+\begin{terminal}
+\pyio{"ba" + "na"*2}{'banana'}
+\pyio{"Py" "thon"}{'Python'}
+\pyi{text = ('Put string 1 '\\
+...\qquad\qquad\quad 'and string 2.')}\\
+\pyio{text}{'Put string 1 and string 2.'}
+\pyi{}
+\end{terminal}
+\end{frame}
+
+%------------------- FRAME ---------------
+\vbg
+\begin{frame}[fragile]
+\ftitle{Strings\\} 
+\begin{terminal}
+\pyi{prefix = 'Py'}\\
+\pyi{prefix 'thon'}
+\begin{sho}
+  File "<stdin>", line 1
+    prefix 'thon'
+                ^
+SyntaxError: invalid syntax    
+\end{sho}
+\pyi{("na" * 2) "ba"}
+\begin{sho}
+  File "<stdin>", line 1
+    ("na" * 2) "ba"
+                  ^
+SyntaxError: invalid syntax   
+\end{sho}
+
+\end{terminal}
+\end{frame}
+
+
+%------------------- FRAME ---------------
+\vbg
+\begin{frame}[fragile]
+\ftitle{Strings\\} 
+\begin{terminal}
+\pyi{word = 'PYTHON'}\\
+\pyio{word[0]}{'P'}
+\pyio{word[5]}{'N'}
+\pyio{word[-1]}{'N'}
+\pyio{word[-3]}{'H'}
+\pyio{word[-6]}{'P'}
+\pyi{word[6]}
+\begin{sho}
+  File "<stdin>", line 1, in <module>
+IndexError: string index out of range    
+\end{sho}
+\end{terminal}
+
+\tikz[overlay,remember picture]{%
+\node at (7.5,5) [fill=mushroom] {%
+\huge\ttfamily
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+P  & Y  & T  & H  & O  & N  \\ \hline
+0  & 1  & 2  & 3  & 4  & 5  \\ \hline
+-6 & -5 & -4 & -3 & -2 & -1 \\ \hline
+\end{tabular}
+}; 
+}
+
+\end{frame}
+
+%------------------- FRAME ---------------
+%\hbg
+%\begin{frame}
+%\ftitle{Strings\\}
+%\vspace{15mm}
+%{\huge\ttfamily
+%\begin{table}[]
+%\begin{tabular}{|c|c|c|c|c|c|}
+%\hline
+%P  & Y  & T  & H  & O  & N  \\ \hline
+%0  & 1  & 2  & 3  & 4  & 5  \\ \hline
+%-6 & -5 & -4 & -3 & -2 & -1 \\ \hline
+%\end{tabular}
+%\end{table}
+%} 
+%
+%\end{frame}
+%------------------- FRAME ---------------
+\episodeisdone
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

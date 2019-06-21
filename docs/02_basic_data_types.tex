@@ -1,0 +1,152 @@
+\documentclass{beamer}
+
+\input{cmd}
+
+
+
+\begin{document}
+
+%------------------- FRAME ---------------
+\coverframe{02}{python basic data types}
+%------------------- FRAME ---------------
+\vbg
+\begin{frame}[fragile]
+\ftitle{Integers\\}
+\begin{terminal}
+\pyio{print(10)}{10}
+\pyio{print(1231231231231231231231231212121212112 + 1)}{1231231231231231231231231212121212113}   
+\pyi{}
+\end{terminal}
+    
+\end{frame}
+%------------------- FRAME ---------------
+\vbg
+\begin{frame}[fragile]
+\ftitle{Integers\\}
+\begin{terminal}
+\pyio{print(0o10)}{8}   
+\pyio{print(0x10)}{16}
+\pyio{print(0b10)}{2}
+\pyio{type(10)}{<class 'int'>}
+\pyio{type(0o10)}{<class 'int'>}
+\pyio{type(0x10)}{<class 'int'>}
+\pyi{}
+\end{terminal}
+
+
+\tikz[overlay, remember picture]{\node at (8,6) [fill=mushroom, rectangle, rounded corners=10, minimum size=3cm, inner sep=3mm] {%
+\begin{tabular}{lll}
+\hline    
+\textbf{Prefix}                                                                                             & \textbf{Interpretation} & \textbf{Base} \\
+\hline
+\texttt{0b} or \texttt{0B}  & Binary  & 2 \\
+%\hline
+\texttt{0o} or \texttt{0O}  & Octal  & 8 \\
+%\hline
+\texttt{0x} or \texttt{0X}  & Hexadecimal  & 16\\
+\hline                                                                                                           
+\end{tabular}
+};}    
+\end{frame}
+
+%------------------- FRAME ---------------
+\begin{frame}
+\ftitle{Floating\\Points}
+\begin{terminal}
+\pyio{4.2}{4.2}
+\pyio{type(4.2)}{<class 'float'>} 
+\pyi{}  
+\end{terminal}
+
+\overlayat{(9.5,3.5)}{%
+\begin{terminal}
+\pyio{4.}{4.0}
+\pyio{.2}{0.2}
+\pyio{.4e7}{4000000.0}
+\pyio{type(.4e7)}{<class 'float'>}
+\pyio{4.2e-2}{0.00042}  
+\pyi{}  
+\end{terminal}
+}
+   
+\end{frame}
+
+%------------------- FRAME ---------------
+\begin{frame}
+\ftitle{Floating\\Points}
+\begin{terminal}
+\pyio{1.79e308}{1.79e308}
+\pyio{1.8e308}{inf}
+\pyio{5e-324}{5e-324}
+\pyio{2e-324}{0.0}  
+\end{terminal}
+   
+\end{frame}
+
+%------------------- FRAME ---------------
+\begin{frame}
+\ftitle{Complex\\Numbers}
+\begin{terminal}
+\pyio{2+3j}{(2+3j)}
+\pyio{type(2+3j)}{<class 'complex'>}
+\pyi{}  
+\end{terminal} 
+\end{frame}
+
+%------------------- FRAME ---------------
+\begin{frame}
+\ftitle{Strings\\}
+\begin{terminal}
+\pyio{print("I am a string.")}{I am a string.}
+\pyio{type("I am a string.")}{<class 'str'>}
+\pyio{print('I am too.')}{I am too.}
+\pyio{type('I am too.')}{<class 'str'>}
+\pyio{print('')}{''}
+\pyio{type('')}{<class 'str'>}
+\pyi{}  
+\end{terminal} 
+\end{frame}
+
+%------------------- FRAME ---------------
+\begin{frame}
+\ftitle{Strings\\}
+\begin{terminal}
+\pyio{print('This string contains a single quote (') character.')}{SyntaxError: invalid syntax}
+\pyio{print("This string contains a single quote (') character.")}{This string contains a single quote (') character.}
+\pyio{print('This string contains a double quote (") character.')}{This string contains a double quote (") character.}
+\pyi{}  
+\end{terminal} 
+\end{frame}
+
+%------------------- FRAME ---------------
+\episodeisdone
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
